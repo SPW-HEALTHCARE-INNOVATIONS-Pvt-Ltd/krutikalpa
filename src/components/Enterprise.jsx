@@ -26,7 +26,7 @@ export default function Enterprise() {
   ];
 
   return (
-    <section id="enterprise" className="section-padding" style={{ background: 'var(--bg-secondary)' }}>
+    <section id="enterprise" className="section-padding" style={{ background: 'var(--bg-secondary)', paddingTop: '5rem' }}>
       <div className="container">
         {/* Lumina Style Hero Section for Enterprise */}
         <div style={{ 
@@ -35,7 +35,7 @@ export default function Enterprise() {
           alignItems: 'center',
           minHeight: '85vh',
           marginBottom: '6rem',
-          paddingTop: '2rem'
+          paddingTop: '0rem'
         }} className="grid-2">
           
           {/* Left Column */}
@@ -219,32 +219,46 @@ export default function Enterprise() {
         {/* Section 3 & 4 Grid */}
         <div className="grid-2" style={{ marginBottom: '6rem' }}>
           {/* Section 3 - Why Businesses Choose Us */}
-          <div className="glass-panel" style={{ background: 'rgba(6, 182, 212, 0.05)', height: 'fit-content' }}>
+          <div className="glass-panel" style={{ background: 'rgba(6, 182, 212, 0.05)', display: 'flex', flexDirection: 'column', height: '100%' }}>
             <h3 style={{ color: 'var(--accent-secondary)', marginBottom: '1.5rem', fontSize: '1.5rem' }}>Why Businesses Choose Krutikalpa</h3>
             <p style={{ marginBottom: '2rem', color: 'var(--text-secondary)' }}>
               Technology is only valuable when it creates measurable business outcomes.
               Our approach combines consulting, technology, and execution to help organizations:
             </p>
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem', flexGrow: 1 }}>
               {[
-                { text: 'Improve productivity', icon: <LineChart size={20} /> },
-                { text: 'Reduce operational costs', icon: <Zap size={20} /> },
-                { text: 'Automate repetitive work', icon: <Cpu size={20} /> },
-                { text: 'Enable faster decision-making', icon: <Globe size={20} /> },
-                { text: 'Build scalable digital systems', icon: <Globe size={20} /> }
+                { title: 'Improve productivity', desc: 'Automate tedious processes to let your team focus on core goals.', icon: <LineChart size={20} /> },
+                { title: 'Reduce operational costs', desc: 'Streamline resource usage and cut waste with optimized pipelines.', icon: <Zap size={20} /> },
+                { title: 'Automate repetitive work', desc: 'Deploy intelligent automation agents that handle high-volume workflows.', icon: <Cpu size={20} /> },
+                { title: 'Enable faster decision-making', desc: 'Access real-time analytical dashboards and intelligence reports.', icon: <Globe size={20} /> },
+                { title: 'Build scalable digital systems', desc: 'Design microservices-based platforms ready for next-gen scaling.', icon: <Globe size={20} /> }
               ].map((item, i) => (
-                <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                  <div style={{ color: 'var(--accent-secondary)' }}>{item.icon}</div>
-                  <span style={{ fontSize: '1.1rem' }}>{item.text}</span>
-                </li>
+                <div key={i} style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                  <div style={{ 
+                    color: 'var(--accent-secondary)', 
+                    background: 'rgba(6, 182, 212, 0.1)', 
+                    padding: '0.5rem', 
+                    borderRadius: '0.5rem',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    marginTop: '0.2rem'
+                  }}>
+                    {item.icon}
+                  </div>
+                  <div>
+                    <h4 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.25rem', color: 'var(--text-primary)' }}>{item.title}</h4>
+                    <p style={{ fontSize: '0.95rem', color: 'var(--text-secondary)', margin: 0, lineHeight: '1.4' }}>{item.desc}</p>
+                  </div>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
 
           {/* Section 4 - Our Capabilities */}
-          <div className="glass-panel">
+          <div className="glass-panel" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
             <h3 style={{ marginBottom: '2rem', fontSize: '1.5rem' }}>Our Capabilities</h3>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', flexGrow: 1, alignContent: 'flex-start' }}>
               {capabilities.map((cap, i) => (
                 <span key={i} style={{
                   padding: '0.75rem 1.25rem',

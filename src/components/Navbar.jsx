@@ -29,10 +29,13 @@ export default function Navbar() {
       borderBottom: '1px solid var(--border-color)', padding: '1rem 0'
     }}>
       <div className="container flex-between">
-        <Link to="/" style={{ fontSize: '1.5rem', fontWeight: 700, letterSpacing: '-0.02em', textDecoration: 'none' }}>
-          <span style={{ color: 'var(--logo-kruti-color)' }}>Kruti</span>
-          <span style={{ color: '#f27921' }}>Kalpa</span>
-          <span style={{ color: 'var(--text-primary)', marginLeft: '0.3rem' }}>Solutions</span>
+        <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '1.5rem', fontWeight: 700, letterSpacing: '-0.02em', textDecoration: 'none' }}>
+          
+          <div>
+            <span style={{ color: 'var(--logo-kruti-color)' }}>Kruti</span>
+            <span style={{ color: '#f27921' }}>Kalpa</span>
+            <span style={{ color: 'var(--text-primary)', marginLeft: '0.3rem', fontSize: '1.25rem', fontWeight: 500 }}>Solutions</span>
+          </div>
         </Link>
 
         {/* Desktop Nav */}

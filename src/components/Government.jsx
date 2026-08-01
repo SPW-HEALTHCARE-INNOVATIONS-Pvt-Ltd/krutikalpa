@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Shield, Settings, Users, MessageSquare, BarChart, Building2, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Shield, Settings, Users, MessageSquare, BarChart, Building2, CheckCircle2, ArrowRight, Map, Briefcase, Award, Activity } from 'lucide-react';
 
 export default function Government() {
   const [hoverDo, setHoverDo] = useState(null);
@@ -19,37 +19,261 @@ export default function Government() {
     }
   ];
 
+  const experienceData = [
+    { year: '2009', scheme: 'RSBY – Rashtriya Swasthya Bima Yojana', states: ['Maharashtra'], scale: '1,50,000' },
+    { year: '2010', scheme: 'RSBY – Rashtriya Swasthya Bima Yojana', states: ['Gujarat', 'Maharashtra'], scale: '3,70,000' },
+    { year: '2011', scheme: 'RSBY – Rashtriya Swasthya Bima Yojana', states: ['Gujarat', 'Maharashtra', 'Karnataka'], scale: '5,90,000' },
+    { year: '2012', scheme: 'BKKY – Biju Krushak Kalyan Yojana', states: ['Odisha'], scale: '1,70,000' },
+    { year: '2013', scheme: 'RSBY – Rashtriya Swasthya Bima Yojana', states: ['Gujarat'], scale: '1,10,000' },
+    { year: '2014', scheme: 'CMUHIS – CM Universal Health Insurance', states: ['Arunachal Pradesh'], scale: '90,000' },
+    { year: '2015', scheme: 'RSBY – Rashtriya Swasthya Bima Yojana', states: ['Karnataka'], scale: '5,10,000' },
+    { year: '2016', scheme: 'AAA – Atal Amrit Abhiyan', states: ['Assam'], scale: '4,10,000' },
+    { year: '2018', scheme: 'MSBY – Mukhya Mantri Swasthya Bima Yojana', states: ['Chhattisgarh'], scale: '2,40,000' },
+    { year: '2023–25', scheme: 'Ayushman Bharat ‘Niramayam’ – TPA Desk & Field Audit', states: ['Madhya Pradesh'], scale: '6,00,000 claims' }
+  ];
+
   return (
-    <section id="government" className="section-padding">
+    <section id="government" className="section-padding" style={{ paddingTop: '5rem' }}>
       <div className="container">
-        {/* Hero Section of Government */}
-        <div style={{ textAlign: 'center', marginBottom: '6rem', maxWidth: '800px', margin: '0 auto 6rem auto' }}>
-          {/* Pill Badge */}
-          <div style={{
-            display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
-            background: 'var(--glass-bg)', padding: '0.5rem 1rem',
-            borderRadius: '2rem', border: '1px solid var(--border-color)',
-            marginBottom: '2rem', fontSize: '0.875rem', fontWeight: 600,
-            color: 'var(--text-secondary)'
-          }}>
-            <span style={{ width: '8px', height: '8px', background: 'var(--accent-primary)', borderRadius: '50%', display: 'inline-block' }}></span>
-            Public Sector Solutions
+        {/* Lumina Style Hero Section for Government */}
+        <div style={{ 
+          display: 'grid',
+          gap: '4rem',
+          alignItems: 'center',
+          minHeight: '75vh',
+          marginBottom: '6rem'
+        }} className="grid-2">
+          
+          {/* Left Column */}
+          <div style={{ textAlign: 'left' }}>
+            {/* Pill Badge */}
+            <div style={{
+              display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
+              background: 'rgba(59, 130, 246, 0.1)', padding: '0.5rem 1rem',
+              borderRadius: '2rem',
+              marginBottom: '2rem', fontSize: '0.875rem', fontWeight: 600,
+              color: 'var(--accent-primary)'
+            }}>
+              <span style={{ width: '8px', height: '8px', background: 'var(--accent-primary)', borderRadius: '50%', display: 'inline-block' }}></span>
+              Public Sector Solutions
+            </div>
+            
+            <h1 style={{
+              fontSize: 'clamp(2.75rem, 4vw + 1rem, 4.25rem)',
+              lineHeight: '1.15',
+              marginBottom: '1.5rem',
+              letterSpacing: '-0.03em',
+              fontWeight: 800,
+              color: 'var(--text-primary)'
+            }}>
+              Building the Future of <br />
+              <span className="text-gradient-accent">Digital Governance</span>
+            </h1>
+            
+            <p style={{ 
+              fontSize: '1.2rem', 
+              color: 'var(--text-secondary)', 
+              marginBottom: '2.5rem',
+              lineHeight: '1.6',
+              maxWidth: '600px'
+            }}>
+              Krutikalpa helps governments deliver faster, smarter, and citizen-centric public services
+              through Artificial Intelligence, Automation, and Digital Platforms.
+            </p>
+            
+            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+              <button className="btn btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.125rem' }}>
+                Request a Demo &rarr;
+              </button>
+            </div>
           </div>
-          <h2 style={{
-            fontSize: 'clamp(2.5rem, 4vw + 1rem, 4rem)',
-            lineHeight: '1.1',
-            marginBottom: '1.5rem',
-            letterSpacing: '-0.03em',
-            fontWeight: 800
+
+          {/* Right Column - Image & Floating Badge */}
+          <div style={{ position: 'relative' }}>
+            <img 
+              src="/government_hero.png" 
+              alt="Digital Governance Platforms" 
+              style={{ 
+                width: '100%', 
+                height: 'auto', 
+                borderRadius: '1.5rem',
+                boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.15)'
+              }} 
+            />
+            
+            {/* Floating Badge (like "Uptime 99.9%") */}
+            <div style={{ 
+              position: 'absolute', 
+              bottom: '15%', 
+              left: '-10%', 
+              background: 'var(--glass-bg)', 
+              backdropFilter: 'blur(12px)',
+              padding: '1.5rem',
+              borderRadius: '1rem',
+              boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
+              border: '1px solid var(--border-color)',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '0.5rem',
+              zIndex: 2
+            }}>
+              <div style={{ fontWeight: 700, color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <span style={{ width: '8px', height: '8px', background: '#10b981', borderRadius: '50%', display: 'inline-block' }}></span>
+                Platform Status
+              </div>
+              <div style={{ color: '#10b981', fontWeight: 600, fontSize: '0.9rem' }}>99.9% Uptime Active</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Section 2 - Government Experience */}
+          <div className="grid-2" style={{ 
+            marginBottom: '4.5rem', 
+            background: 'rgba(59, 130, 246, 0.03)', 
+            border: '1px solid var(--border-color)', 
+            borderRadius: '1.5rem', 
+            padding: '3rem 2.5rem', 
+            position: 'relative', 
+            overflow: 'hidden',
+            alignItems: 'center'
           }}>
-            Building the Future of <br />
-            <span className="text-gradient-accent">Digital Governance</span>
-          </h2>
-          <p style={{ fontSize: '1.25rem', color: 'var(--text-secondary)', marginBottom: '2.5rem' }}>
-            Krutikalpa helps governments deliver faster, smarter, and citizen-centric public services
-            through Artificial Intelligence, Automation, and Digital Platforms.
-          </p>
-          <button className="btn btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.125rem' }}>Request a Demo</button>
+            {/* Ambient Background Glow */}
+            <div style={{
+              position: 'absolute',
+              top: '-50px',
+              left: '-50px',
+              width: '250px',
+              height: '250px',
+              background: 'rgba(59, 130, 246, 0.12)',
+              borderRadius: '50%',
+              filter: 'blur(60px)',
+              zIndex: 0,
+              pointerEvents: 'none'
+            }}></div>
+            
+            {/* Left Column - Heading & Badge */}
+            <div style={{ position: 'relative', zIndex: 1 }}>
+              <div style={{ 
+                display: 'inline-flex', 
+                alignItems: 'center', 
+                background: 'rgba(16, 185, 129, 0.1)', 
+                color: '#10b981', 
+                padding: '0.5rem 1.25rem', 
+                borderRadius: '2rem', 
+                fontWeight: 700, 
+                fontSize: '0.9rem',
+                letterSpacing: '0.05em',
+                textTransform: 'uppercase',
+                marginBottom: '1.25rem'
+              }}>
+                <span style={{ width: '6px', height: '6px', background: '#10b981', borderRadius: '50%', marginRight: '8px' }}></span>
+                15+ Years of Delivery
+              </div>
+              <h2 style={{ 
+                fontSize: 'clamp(2rem, 3.5vw, 2.75rem)', 
+                fontWeight: 850, 
+                lineHeight: '1.15', 
+                letterSpacing: '-0.03em',
+                color: 'var(--text-primary)',
+                margin: 0
+              }}>
+                Government <br />
+                <span className="text-gradient-accent">Experience</span>
+              </h2>
+            </div>
+
+            {/* Right Column - Narrative description */}
+            <div style={{ 
+              position: 'relative', 
+              zIndex: 1,
+              borderLeft: '4px solid var(--accent-primary)',
+              paddingLeft: '2rem'
+            }}>
+              <p style={{ 
+                fontSize: '1.15rem', 
+                color: 'var(--text-secondary)', 
+                lineHeight: '1.75',
+                margin: 0,
+                fontWeight: 500
+              }}>
+                Krutikalpa’s leadership and execution team has contributed to the successful implementation of large-scale technology-driven government programmes across multiple states in India, spanning beneficiary enrolment, smart identity solutions, healthcare technology, and claims audit at national scale.
+              </p>
+            </div>
+          </div>
+
+          <div className="glass-panel" style={{ padding: '0', overflow: 'hidden', borderRadius: '1.25rem', border: '1px solid var(--border-color)' }}>
+            <div style={{ overflowX: 'auto' }}>
+              <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left' }}>
+                <thead>
+                  <tr style={{ background: 'rgba(59, 130, 246, 0.08)', borderBottom: '1px solid var(--border-color)' }}>
+                    <th style={{ padding: '1.25rem 2rem', color: 'var(--text-primary)', fontWeight: 700, fontSize: '1rem', textAlign: 'center' }}>Year</th>
+                    <th style={{ padding: '1.25rem 2rem', color: 'var(--text-primary)', fontWeight: 700, fontSize: '1rem', textAlign: 'center' }}>Scheme / Programme</th>
+                    <th style={{ padding: '1.25rem 2rem', color: 'var(--text-primary)', fontWeight: 700, fontSize: '1rem', textAlign: 'center' }}>State(s)</th>
+                    <th style={{ padding: '1.25rem 2rem', color: 'var(--text-primary)', fontWeight: 700, fontSize: '1rem', textAlign: 'center' }}>Scale</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {experienceData.map((row, index) => (
+                    <tr 
+                      key={index} 
+                      style={{ 
+                        borderBottom: index === experienceData.length - 1 ? 'none' : '1px solid var(--border-color)',
+                        transition: 'background 0.2s',
+                        cursor: 'default'
+                      }}
+                      onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(59, 130, 246, 0.03)'}
+                      onMouseLeave={(e) => e.currentTarget.style.background = 'transparent'}
+                    >
+                      <td style={{ padding: '1.25rem 2rem', whiteSpace: 'nowrap', textAlign: 'center' }}>
+                        <span style={{ 
+                          background: row.year.includes('–') ? 'rgba(99, 102, 241, 0.15)' : 'rgba(59, 130, 246, 0.1)', 
+                          color: row.year.includes('–') ? '#6366f1' : 'var(--accent-primary)', 
+                          padding: '0.4rem 0.8rem', 
+                          borderRadius: '2rem', 
+                          fontWeight: 700,
+                          fontSize: '0.95rem'
+                        }}>
+                          {row.year}
+                        </span>
+                      </td>
+                      <td style={{ padding: '1.25rem 2rem', color: '#f56f10ff', fontWeight: 600, fontSize: '1.05rem', textAlign: 'center' }}>
+                        {row.scheme}
+                      </td>
+                      <td style={{ padding: '1.25rem 2rem', textAlign: 'center' }}>
+                        <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+                          {row.states.map((state, sIdx) => (
+                            <span 
+                              key={sIdx} 
+                              style={{ 
+                                background: 'rgba(255, 255, 255, 0.05)', 
+                                border: '1px solid var(--border-color)', 
+                                color: 'var(--text-secondary)', 
+                                padding: '0.25rem 0.6rem', 
+                                borderRadius: '0.5rem', 
+                                fontSize: '0.85rem',
+                                fontWeight: 500
+                              }}
+                            >
+                              {state}
+                            </span>
+                          ))}
+                        </div>
+                      </td>
+                      <td style={{ padding: '1.25rem 2rem', textAlign: 'center', whiteSpace: 'nowrap' }}>
+                        <span style={{ 
+                          color: '#10b981', 
+                          fontWeight: 800, 
+                          fontSize: '1.1rem' 
+                        }}>
+                          {row.scale}
+                        </span>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
 
         {/* Section 1 - What We Do */}
@@ -102,11 +326,9 @@ export default function Government() {
                     flexDirection: 'column',
                     padding: '2.5rem 2rem',
                     cursor: 'pointer',
-                    background: hoverPlatform === i
-                      ? 'linear-gradient(135deg, var(--accent-primary), var(--accent-secondary))'
-                      : 'var(--glass-bg)',
+                    background: hoverPlatform === i ? 'var(--accent-primary)' : 'var(--glass-bg)',
                     border: '1px solid',
-                    borderColor: hoverPlatform === i ? 'transparent' : 'var(--border-color)',
+                    borderColor: hoverPlatform === i ? 'var(--accent-primary)' : 'var(--border-color)',
                     borderRadius: '1.5rem',
                     boxShadow: hoverPlatform === i ? '0 15px 35px -5px rgba(59, 130, 246, 0.4)' : '0 4px 20px rgba(0, 0, 0, 0.03)',
                     transform: hoverPlatform === i ? 'translateY(-4px)' : 'none',
@@ -176,15 +398,87 @@ export default function Government() {
           <h3 style={{ textAlign: 'center', marginBottom: '3rem', fontSize: '2rem' }}>Our Impact in Numbers</h3>
           <div className="grid-5" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '2rem' }}>
             {[
-              { num: '50 Lakhs+', label: 'Citizens Enrolled & Served' },
-              { num: '10+', label: 'States Across India' },
-              { num: '8', label: 'Major Government Schemes' },
-              { num: '15+', label: 'Years of Experience' },
-              { num: '99%', label: 'Platform Uptime Commitment' }
+              { num: '50 Lakhs+', label: 'Citizens Enrolled & Served', icon: <Users size={28} />, color: 'var(--accent-primary)', glow: 'rgba(59, 130, 246, 0.15)' },
+              { num: '10+', label: 'States Across India', icon: <Map size={28} />, color: 'var(--accent-secondary)', glow: 'rgba(6, 182, 212, 0.15)' },
+              { num: '8', label: 'Major Government Schemes', icon: <Briefcase size={28} />, color: '#f59e0b', glow: 'rgba(245, 158, 11, 0.15)' },
+              { num: '15+', label: 'Years of Experience', icon: <Award size={28} />, color: '#10b981', glow: 'rgba(16, 185, 129, 0.15)' },
+              { num: '99%', label: 'Platform Uptime Commitment', icon: <Activity size={28} />, color: '#6366f1', glow: 'rgba(99, 102, 241, 0.15)' }
             ].map((stat, i) => (
-              <div key={i} className="glass-panel" style={{ textAlign: 'center', padding: '2rem 1.5rem' }}>
-                <div style={{ fontSize: '2.5rem', fontWeight: 800, color: 'var(--accent-primary)', marginBottom: '1rem' }}>{stat.num}</div>
-                <div style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', fontWeight: 500, lineHeight: '1.4' }}>{stat.label}</div>
+              <div 
+                key={i} 
+                className="glass-panel" 
+                style={{ 
+                  textAlign: 'center', 
+                  padding: '2.5rem 1.5rem 2rem 1.5rem',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  borderTop: `4px solid ${stat.color}`,
+                  background: 'linear-gradient(180deg, var(--bg-secondary) 0%, rgba(255, 255, 255, 0.02) 100%)',
+                  boxShadow: '0 10px 30px rgba(0, 0, 0, 0.05)',
+                  transition: 'all 0.3s ease'
+                }}
+              >
+                {/* Floating Icon Background Glow */}
+                <div style={{
+                  position: 'absolute',
+                  top: '-1rem',
+                  right: '-1rem',
+                  width: '80px',
+                  height: '80px',
+                  background: stat.glow,
+                  borderRadius: '50%',
+                  filter: 'blur(20px)',
+                  zIndex: 0,
+                  opacity: 0.5
+                }}></div>
+
+                {/* Icon Container */}
+                <div style={{
+                  width: '56px',
+                  height: '56px',
+                  borderRadius: '50%',
+                  background: stat.glow,
+                  color: stat.color,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  marginBottom: '1.5rem',
+                  position: 'relative',
+                  zIndex: 1,
+                  boxShadow: `0 8px 16px ${stat.glow}`
+                }}>
+                  {stat.icon}
+                </div>
+
+                {/* Value/Number */}
+                <div style={{ 
+                  fontSize: '2.25rem', 
+                  fontWeight: 850, 
+                  color: 'var(--text-primary)', 
+                  marginBottom: '0.75rem',
+                  letterSpacing: '-0.02em',
+                  position: 'relative',
+                  zIndex: 1,
+                  lineHeight: '1.1'
+                }}>
+                  {stat.num}
+                </div>
+
+                {/* Label */}
+                <div style={{ 
+                  fontSize: '0.95rem', 
+                  color: 'var(--text-secondary)', 
+                  fontWeight: 600, 
+                  lineHeight: '1.4',
+                  position: 'relative',
+                  zIndex: 1,
+                  maxWidth: '90%'
+                }}>
+                  {stat.label}
+                </div>
               </div>
             ))}
           </div>
@@ -219,7 +513,6 @@ export default function Government() {
             Schedule a Discussion
           </button>
         </div>
-      </div>
-    </section>
+      </section>
   );
 }

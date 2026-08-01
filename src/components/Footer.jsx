@@ -10,10 +10,12 @@ export default function Footer() {
 
           {/* Brand Column */}
           <div>
-            <h3 style={{ marginBottom: '1.5rem', letterSpacing: '-0.02em', fontSize: '1.75rem', fontWeight: 700 }}>
-              <span style={{ color: 'var(--logo-kruti-color)' }}>Kruti</span>
-              <span style={{ color: '#f27921' }}>Kalpa</span>
-              <span style={{ color: 'var(--text-primary)', marginLeft: '0.3rem' }}>Solutions</span>
+            <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.5rem', letterSpacing: '-0.02em', fontSize: '1.75rem', fontWeight: 700 }}>
+              <div>
+                <span style={{ color: 'var(--logo-kruti-color)' }}>Kruti</span>
+                <span style={{ color: '#f27921' }}>Kalpa</span>
+                <span style={{ color: 'var(--text-primary)', marginLeft: '0.3rem', fontSize: '1.25rem', fontWeight: 500 }}>Solutions</span>
+              </div>
             </h3>
             <p style={{ color: 'var(--text-secondary)', lineHeight: '1.6' }}>
               Building the future of digital governance and enterprise automation through Artificial Intelligence.
