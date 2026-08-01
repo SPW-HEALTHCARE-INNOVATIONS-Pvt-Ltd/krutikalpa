@@ -81,11 +81,7 @@ export default function Government() {
               through Artificial Intelligence, Automation, and Digital Platforms.
             </p>
             
-            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-              <button className="btn btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.125rem' }}>
-                Request a Demo &rarr;
-              </button>
-            </div>
+          
           </div>
 
           {/* Right Column - Image & Floating Badge */}
@@ -496,22 +492,10 @@ export default function Government() {
           <h3 style={{ fontSize: 'clamp(2rem, 4vw, 2.5rem)', marginBottom: '1.5rem', color: '#ffffff', fontWeight: 800, letterSpacing: '-0.02em' }}>
             Ready to Modernize Public Services?
           </h3>
-          <p style={{ fontSize: '1.25rem', color: 'rgba(255, 255, 255, 0.9)', marginBottom: '2.5rem', maxWidth: '600px', margin: '0 auto 2.5rem auto' }}>
+          <p style={{ fontSize: '1.25rem', color: 'rgba(255, 255, 255, 0.9)', marginBottom: '1rem', maxWidth: '600px', margin: '0 auto 2.5rem auto' }}>
             Let's build the next generation of digital governance together.
           </p>
-          <button style={{
-            padding: '1rem 2.5rem',
-            fontSize: '1.125rem',
-            fontWeight: 600,
-            background: '#ffffff',
-            color: 'var(--accent-primary)',
-            border: 'none',
-            borderRadius: '2rem',
-            cursor: 'pointer',
-            boxShadow: '0 4px 15px rgba(0,0,0,0.1)'
-          }}>
-            Schedule a Discussion
-          </button>
+          
         </div>
       </section>
   );

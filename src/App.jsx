@@ -9,6 +9,7 @@ import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsConditions from './components/TermsConditions';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import FloatingContact from './components/FloatingContact';
 
 // Helper component to handle anchor links with react-router
 const ScrollToHash = () => {
@@ -46,6 +47,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
+        <FloatingContact />
       </div>
     </BrowserRouter>
   );
