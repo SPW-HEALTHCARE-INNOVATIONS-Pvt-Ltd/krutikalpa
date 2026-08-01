@@ -95,7 +95,23 @@ export default function Contact() {
                     <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                   </svg>
                 </div>
-                <a href={CONTACT_LINKS.email} style={badgeLinkStyle}>
+                <a
+                  href={CONTACT_LINKS.email}
+                  onClick={(e) => {
+                    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                    if (!isMobile) {
+                      e.preventDefault();
+                      window.dispatchEvent(new CustomEvent('open-email-options', {
+                        detail: {
+                          email: CONTACT_INFO.email,
+                          subject: CONTACT_INFO.emailSubject,
+                          body: CONTACT_INFO.emailBody
+                        }
+                      }));
+                    }
+                  }}
+                  style={badgeLinkStyle}
+                >
                   {CONTACT_INFO.email}
                 </a>
               </div>
