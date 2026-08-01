@@ -7,7 +7,7 @@ export default function Hero() {
     <section style={{ 
       position: 'relative',
       overflow: 'hidden',
-      paddingTop: '10rem',
+      paddingTop: '5rem',
       paddingBottom: '8rem',
       minHeight: '100vh',
       display: 'flex',

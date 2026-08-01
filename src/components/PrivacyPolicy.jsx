@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function PrivacyPolicy() {
   return (
-    <section className="section-padding" style={{ paddingTop: '8rem', paddingBottom: '8rem' }}>
+    <section className="section-padding" style={{ paddingTop: '5rem', paddingBottom: '8rem' }}>
       <div className="container" style={{ maxWidth: '800px', margin: '0 auto' }}>
         
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
