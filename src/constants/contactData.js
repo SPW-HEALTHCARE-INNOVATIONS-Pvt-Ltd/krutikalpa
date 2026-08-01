@@ -6,7 +6,7 @@ export const CONTACT_INFO = {
   whatsappPhone: "916364917021", // no leading '+' or '00' for wa.me
   whatsappMessage: "Hi Krutikalpa Team, I would like to know more about your services.",
   emailSubject: "Website Inquiry",
-  emailBody: "Hello Krutikalpa Team,\n\nI would like to know more about your services.\n\nThank you.",
+  emailBody: "Hello Krutikalpa Team,\r\n\r\nI would like to know more about your services.\r\n\r\nThank you.",
   smsMessage: "Hello Krutikalpa Team, I want to know more about your services."
 };
 

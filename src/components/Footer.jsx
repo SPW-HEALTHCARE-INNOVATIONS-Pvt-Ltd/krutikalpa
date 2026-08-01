@@ -47,8 +47,44 @@ export default function Footer() {
             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', color: 'var(--text-secondary)' }}>
               <Mail size={18} style={{ flexShrink: 0, marginTop: '0.25rem' }} />
               <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <a href={CONTACT_LINKS.email} style={{ color: 'var(--text-secondary)', textDecoration: 'none', marginBottom: '0.25rem' }}>{CONTACT_INFO.email}</a>
-                <a href={CONTACT_LINKS.supportEmail} style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}>{CONTACT_INFO.supportEmail}</a>
+                <a
+                  href={CONTACT_LINKS.email}
+                  onClick={(e) => {
+                    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                    if (!isMobile) {
+                      e.preventDefault();
+                      window.dispatchEvent(new CustomEvent('open-email-options', {
+                        detail: {
+                          email: CONTACT_INFO.email,
+                          subject: CONTACT_INFO.emailSubject,
+                          body: CONTACT_INFO.emailBody
+                        }
+                      }));
+                    }
+                  }}
+                  style={{ color: 'var(--text-secondary)', textDecoration: 'none', marginBottom: '0.25rem' }}
+                >
+                  {CONTACT_INFO.email}
+                </a>
+                <a
+                  href={CONTACT_LINKS.supportEmail}
+                  onClick={(e) => {
+                    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                    if (!isMobile) {
+                      e.preventDefault();
+                      window.dispatchEvent(new CustomEvent('open-email-options', {
+                        detail: {
+                          email: CONTACT_INFO.supportEmail,
+                          subject: CONTACT_INFO.emailSubject,
+                          body: CONTACT_INFO.emailBody
+                        }
+                      }));
+                    }
+                  }}
+                  style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}
+                >
+                  {CONTACT_INFO.supportEmail}
+                </a>
               </div>
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: 'var(--text-secondary)' }}>
@@ -100,6 +136,19 @@ export default function Footer() {
                 </a>
                 <a
                   href={CONTACT_LINKS.email}
+                  onClick={(e) => {
+                    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                    if (!isMobile) {
+                      e.preventDefault();
+                      window.dispatchEvent(new CustomEvent('open-email-options', {
+                        detail: {
+                          email: CONTACT_INFO.email,
+                          subject: CONTACT_INFO.emailSubject,
+                          body: CONTACT_INFO.emailBody
+                        }
+                      }));
+                    }
+                  }}
                   className="footer-quick-btn"
                   style={{ ...footerIconStyle, color: '#EA4335' }}
                   title="Email"
