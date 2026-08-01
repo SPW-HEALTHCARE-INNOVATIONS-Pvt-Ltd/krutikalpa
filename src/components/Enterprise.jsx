@@ -74,43 +74,6 @@ export default function Enterprise() {
               Krutikalpa partners with businesses to design intelligent software, automate operations,
               and unlock growth through Artificial Intelligence and Digital Transformation.
             </p>
-            
-            <div style={{ display: 'flex', gap: '1rem', marginBottom: '4rem', flexWrap: 'wrap' }}>
-              <button style={{ 
-                padding: '1rem 2rem', 
-                fontSize: '1.125rem',
-                background: '#4f46e5',
-                color: '#fff',
-                border: 'none',
-                borderRadius: '0.5rem',
-                fontWeight: 600,
-                cursor: 'pointer',
-                boxShadow: '0 4px 14px rgba(79, 70, 229, 0.4)',
-                transition: 'transform 0.2s'
-              }}
-              onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
-              onMouseLeave={(e) => e.currentTarget.style.transform = 'none'}
-              >
-                Start Free Trial &rarr;
-              </button>
-              <button style={{ 
-                padding: '1rem 2rem', 
-                fontSize: '1.125rem',
-                background: 'transparent',
-                color: 'var(--text-primary)',
-                border: '1px solid var(--border-color)',
-                borderRadius: '0.5rem',
-                fontWeight: 600,
-                cursor: 'pointer',
-                transition: 'background 0.2s'
-              }}
-              onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(0,0,0,0.05)'}
-              onMouseLeave={(e) => e.currentTarget.style.background = 'transparent'}
-              >
-                Learn More
-              </button>
-            </div>
-
             {/* Metrics */}
             <div style={{ display: 'flex', gap: '3rem', borderTop: '1px solid var(--border-color)', paddingTop: '2rem' }}>
               <div>
@@ -286,22 +249,9 @@ export default function Enterprise() {
           <h3 style={{ fontSize: 'clamp(2rem, 4vw, 2.5rem)', marginBottom: '1.5rem', color: '#ffffff', fontWeight: 800, letterSpacing: '-0.02em' }}>
             Let's Build Smarter Businesses
           </h3>
-          <p style={{ fontSize: '1.25rem', color: 'rgba(255, 255, 255, 0.9)', marginBottom: '2.5rem', maxWidth: '600px', margin: '0 auto 2.5rem auto' }}>
+          <p style={{ fontSize: '1.25rem', color: 'rgba(255, 255, 255, 0.9)', marginBottom: '0rem', maxWidth: '600px', margin: '0 auto 2.5rem auto' }}>
             Whether you're starting your AI journey or scaling enterprise-wide transformation, we're ready to help.
-          </p>
-          <button style={{
-            padding: '1rem 2.5rem',
-            fontSize: '1.125rem',
-            fontWeight: 600,
-            background: '#ffffff',
-            color: 'var(--accent-primary)',
-            border: 'none',
-            borderRadius: '2rem',
-            cursor: 'pointer',
-            boxShadow: '0 4px 15px rgba(0,0,0,0.1)'
-          }}>
-            Talk to Our Team
-          </button>
+      </p>
         </div>
       </div>
     </section>
