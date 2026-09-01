@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Cpu, Zap, LineChart, Globe, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Cpu, Zap, LineChart, Globe } from 'lucide-react';
 
 export default function Enterprise() {
   const [hoverOffer, setHoverOffer] = useState(null);
@@ -28,17 +28,15 @@ export default function Enterprise() {
   return (
     <section id="enterprise" className="section-padding" style={{ background: 'var(--bg-secondary)', paddingTop: '5rem' }}>
       <div className="container">
-        {/* Lumina Style Hero Section for Enterprise */}
+        {/* Hero Section for Enterprise */}
         <div style={{ 
-          display: 'grid',
-          gap: '4rem',
-          alignItems: 'center',
-          minHeight: '85vh',
-          marginBottom: '6rem',
-          paddingTop: '0rem'
-        }} className="grid-2">
-          
-          {/* Left Column */}
+          minHeight: '60vh', 
+          marginBottom: '6rem', 
+          display: 'flex', 
+          flexDirection: 'column', 
+          justifyContent: 'center', 
+          maxWidth: '900px' 
+        }}>
           <div style={{ textAlign: 'left' }}>
             {/* Pill Badge */}
             <div style={{
@@ -67,15 +65,16 @@ export default function Enterprise() {
             <p style={{ 
               fontSize: '1.25rem', 
               color: 'var(--text-secondary)', 
-              marginBottom: '2.5rem',
-              lineHeight: '1.6',
-              maxWidth: '600px'
+              marginBottom: '2.5rem', 
+              lineHeight: '1.6', 
+              maxWidth: '750px' 
             }}>
               Krutikalpa partners with businesses to design intelligent software, automate operations,
               and unlock growth through Artificial Intelligence and Digital Transformation.
             </p>
+
             {/* Metrics */}
-            <div style={{ display: 'flex', gap: '3rem', borderTop: '1px solid var(--border-color)', paddingTop: '2rem' }}>
+            <div style={{ display: 'flex', gap: '3rem', borderTop: '1px solid var(--border-color)', paddingTop: '2rem', flexWrap: 'wrap' }}>
               <div>
                 <h4 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '0.25rem', color: 'var(--text-primary)' }}>10k+</h4>
                 <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Happy Customers</p>
@@ -88,40 +87,6 @@ export default function Enterprise() {
                 <h4 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '0.25rem', color: 'var(--text-primary)' }}>150+</h4>
                 <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Components</p>
               </div>
-            </div>
-          </div>
-
-          {/* Right Column - Image & Floating Badge */}
-          <div style={{ position: 'relative' }}>
-            <img 
-              src="/enterprise_hero.png" 
-              alt="Enterprise Professionals" 
-              style={{ 
-                width: '100%', 
-                height: 'auto', 
-                borderRadius: '1.5rem',
-                boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.15)'
-              }} 
-            />
-            
-            {/* Floating Badge (like "Revenue Up") */}
-            <div style={{ 
-              position: 'absolute', 
-              bottom: '15%', 
-              left: '-10%', 
-              background: 'var(--glass-bg)', 
-              backdropFilter: 'blur(12px)',
-              padding: '1.5rem',
-              borderRadius: '1rem',
-              boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
-              border: '1px solid var(--border-color)',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '0.5rem',
-              zIndex: 2
-            }}>
-              <div style={{ fontWeight: 700, color: 'var(--text-primary)' }}>Revenue Up</div>
-              <div style={{ color: '#10b981', fontWeight: 600, fontSize: '0.9rem' }}>+42% this month</div>
             </div>
           </div>
         </div>
@@ -147,7 +112,8 @@ export default function Enterprise() {
                   boxShadow: hoverOffer === i ? '0 10px 25px -5px rgba(59, 130, 246, 0.5)' : 'none',
                   transform: hoverOffer === i ? 'translateY(-2px)' : 'none',
                   transition: 'all 0.3s ease'
-                }}>
+                }}
+              >
                 <Cpu size={24} color={hoverOffer === i ? '#ffffff' : 'var(--accent-secondary)'} />
                 <span style={{ fontWeight: 600, color: hoverOffer === i ? '#ffffff' : 'inherit' }}>{item}</span>
               </div>
@@ -201,11 +167,11 @@ export default function Enterprise() {
                     color: 'var(--accent-secondary)', 
                     background: 'rgba(6, 182, 212, 0.1)', 
                     padding: '0.5rem', 
-                    borderRadius: '0.5rem',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    marginTop: '0.2rem'
+                    borderRadius: '0.5rem', 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center', 
+                    marginTop: '0.2rem' 
                   }}>
                     {item.icon}
                   </div>
@@ -249,9 +215,9 @@ export default function Enterprise() {
           <h3 style={{ fontSize: 'clamp(2rem, 4vw, 2.5rem)', marginBottom: '1.5rem', color: '#ffffff', fontWeight: 800, letterSpacing: '-0.02em' }}>
             Let's Build Smarter Businesses
           </h3>
-          <p style={{ fontSize: '1.25rem', color: 'rgba(255, 255, 255, 0.9)', marginBottom: '0rem', maxWidth: '600px', margin: '0 auto 2.5rem auto' }}>
+          <p style={{ fontSize: '1.25rem', color: 'rgba(255, 255, 255, 0.9)', maxWidth: '600px', margin: '0 auto 2.5rem auto' }}>
             Whether you're starting your AI journey or scaling enterprise-wide transformation, we're ready to help.
-      </p>
+          </p>
         </div>
       </div>
     </section>
