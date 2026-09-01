@@ -1,5 +1,4 @@
 import React from 'react';
-import { Star, Navigation } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Hero() {
@@ -9,7 +8,7 @@ export default function Hero() {
       overflow: 'hidden',
       paddingTop: '5rem',
       paddingBottom: '8rem',
-      minHeight: '100vh',
+      minHeight: '80vh',
       display: 'flex',
       alignItems: 'center',
       background: 'var(--bg-primary)'
@@ -26,115 +25,81 @@ export default function Hero() {
       }}></div>
 
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-        <div className="grid-2" style={{ alignItems: 'center', gap: '4rem' }}>
+        <div style={{ maxWidth: '850px' }}>
           
-          {/* Left Column - Text Content */}
-          <div style={{ paddingRight: '2rem' }}>
-            <div style={{ 
-              display: 'flex', alignItems: 'center', gap: '1rem', 
-              color: '#1e3a8a', fontWeight: 600, fontSize: '1.1rem',
-              marginBottom: '1.5rem'
-            }}>
-              Delight your Customers
-              <div style={{ height: '2px', width: '40px', background: '#1e3a8a' }}></div>
-            </div>
-            
-            <h1 style={{ 
-              fontSize: 'clamp(3rem, 4vw, 4.5rem)', 
-              lineHeight: '1.15', 
-              marginBottom: '1.5rem', 
-              letterSpacing: '-0.02em',
-              fontWeight: 800,
-              color: 'var(--text-primary)'
-            }}>
-              Do you want to see <br />
-              <span style={{ color: '#1e3a8a' }}>what you've been missing?</span>
-            </h1>
-            
-            <p style={{ 
-              fontSize: '1.125rem', 
-              color: 'var(--text-secondary)', 
-              marginBottom: '3rem', 
-              lineHeight: '1.7',
-              maxWidth: '90%'
-            }}>
-              We are equipped with an updated technical knowledge to serve our customers 
-              properly. Our method of application maintains the industry standards for Government & Enterprise solutions.
-            </p>
-            
-            <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
-              <Link to="/enterprise" style={{ 
-                padding: '1rem 2.5rem', 
-                background: '#1e3a8a', 
-                color: '#fff', 
-                borderRadius: '0.25rem',
-                fontWeight: 600,
-                textDecoration: 'none',
-                display: 'inline-flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                boxShadow: '0 4px 15px rgba(30, 58, 138, 0.3)',
-                transition: 'transform 0.2s',
-                cursor: 'pointer'
-              }}>
-                View Details
-              </Link>
-              <Link to="/#contact" style={{ 
-                padding: '1rem 2.5rem', 
-                background: 'transparent', 
-                color: 'var(--text-primary)', 
-                border: '1px solid var(--border-color)',
-                borderRadius: '0.25rem',
-                fontWeight: 600,
-                textDecoration: 'none',
-                display: 'inline-flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                transition: 'background 0.2s'
-              }}>
-                Contact Us
-              </Link>
-            </div>
+          {/* Header Tag */}
+          <div style={{ 
+            display: 'flex', alignItems: 'center', gap: '1rem', 
+            color: '#1e3a8a', fontWeight: 600, fontSize: '1.1rem',
+            marginBottom: '1.5rem'
+          }}>
+            Delight your Customers
+            <div style={{ height: '2px', width: '40px', background: '#1e3a8a' }}></div>
+          </div>
+          
+          <h1 style={{ 
+            fontSize: 'clamp(3rem, 4vw, 4.5rem)', 
+            lineHeight: '1.15', 
+            marginBottom: '1.5rem', 
+            letterSpacing: '-0.02em', 
+            fontWeight: 800, 
+            color: 'var(--text-primary)'
+          }}>
+            Do you want to see <br />
+            <span style={{ color: '#1e3a8a' }}>what you've been missing?</span>
+          </h1>
+          
+          <p style={{ 
+            fontSize: '1.2rem', 
+            color: 'var(--text-secondary)', 
+            marginBottom: '3rem', 
+            lineHeight: '1.7', 
+            maxWidth: '750px'
+          }}>
+            We are equipped with an updated technical knowledge to serve our customers 
+            properly. Our method of application maintains the industry standards for Government & Enterprise solutions.
+          </p>
+          
+          <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
+            <Link to="/enterprise" style={{ 
+              padding: '1rem 2.5rem', 
+              background: '#1e3a8a', 
+              color: '#fff', 
+              borderRadius: '0.25rem', 
+              fontWeight: 600, 
+              textDecoration: 'none', 
+              display: 'inline-flex', 
+              alignItems: 'center', 
+              justifyContent: 'center', 
+              boxShadow: '0 4px 15px rgba(30, 58, 138, 0.3)', 
+              transition: 'transform 0.2s', 
+              cursor: 'pointer' 
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
+            onMouseLeave={(e) => e.currentTarget.style.transform = 'none'}
+            >
+              View Details
+            </Link>
+            <Link to="/#contact" style={{ 
+              padding: '1rem 2.5rem', 
+              background: 'transparent', 
+              color: 'var(--text-primary)', 
+              border: '1px solid var(--border-color)', 
+              borderRadius: '0.25rem', 
+              fontWeight: 600, 
+              textDecoration: 'none', 
+              display: 'inline-flex', 
+              alignItems: 'center', 
+              justifyContent: 'center', 
+              transition: 'background 0.2s' 
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(0,0,0,0.05)'}
+            onMouseLeave={(e) => e.currentTarget.style.background = 'transparent'}
+            >
+              Contact Us
+            </Link>
           </div>
 
-          {/* Right Column - Image & Badge */}
-          <div style={{ position: 'relative', marginTop: '2rem' }}>
-            <img 
-              src="/hero_professionals.png" 
-              alt="Business Professionals" 
-              style={{ 
-                width: '100%', 
-                height: 'auto', 
-                borderRadius: '1rem',
-                position: 'relative',
-                zIndex: 1,
-                boxShadow: '0 20px 40px rgba(0,0,0,0.1)'
-              }} 
-            />
-            
-            {/* Floating Satisfaction Badge */}
-            <div style={{ 
-              position: 'absolute', 
-              bottom: '-2rem', 
-              left: '-2rem', 
-              background: '#1e3a8a', 
-              color: '#fff',
-              borderRadius: '50%',
-              width: '160px',
-              height: '160px',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              justifyContent: 'center',
-              textAlign: 'center',
-              boxShadow: '0 15px 35px rgba(30, 58, 138, 0.4)',
-              zIndex: 2
-            }}>
-              <Navigation fill="transparent" size={32} style={{ marginBottom: '0.5rem', transform: 'rotate(45deg)' }} />
-              <div style={{ fontWeight: 600, fontSize: '0.9rem', lineHeight: '1.4' }}>100% Client<br />Satisfaction</div>
-            </div>
-          </div>
-          
         </div>
       </div>
     </section>
