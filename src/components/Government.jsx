@@ -20,16 +20,16 @@ export default function Government() {
   ];
 
   const experienceData = [
-    { year: '2009', scheme: 'RSBY – Rashtriya Swasthya Bima Yojana', scale: '1,50,000' },
-    { year: '2010', scheme: 'RSBY – Rashtriya Swasthya Bima Yojana', scale: '3,70,000' },
-    { year: '2011', scheme: 'RSBY – Rashtriya Swasthya Bima Yojana', scale: '5,90,000' },
-    { year: '2012', scheme: 'BKKY – Biju Krushak Kalyan Yojana', scale: '1,70,000' },
-    { year: '2013', scheme: 'RSBY – Rashtriya Swasthya Bima Yojana', scale: '1,10,000' },
-    { year: '2014', scheme: 'CMUHIS – CM Universal Health Insurance', scale: '90,000' },
-    { year: '2015', scheme: 'RSBY – Rashtriya Swasthya Bima Yojana', scale: '5,10,000' },
-    { year: '2016', scheme: 'AAA – Atal Amrit Abhiyan', scale: '4,10,000' },
-    { year: '2018', scheme: 'MSBY – Mukhya Mantri Swasthya Bima Yojana', scale: '2,40,000' },
-    { year: '2023–25', scheme: 'Ayushman Bharat – Claims Desk & Field Audit', scale: '6,00,000 claims' }
+    { year: '2009', scheme: 'RSBY – Rashtriya Swasthya Bima Yojana', 'scale: '1,50,000' },
+    { year: '2010', scheme: 'RSBY – Rashtriya Swasthya Bima Yojana', 'scale: '3,70,000' },
+    { year: '2011', scheme: 'RSBY – Rashtriya Swasthya Bima Yojana', 'scale: '5,90,000' },
+    { year: '2012', scheme: 'BKKY – Biju Krushak Kalyan Yojana', 'scale: '1,70,000' },
+    { year: '2013', scheme: 'RSBY – Rashtriya Swasthya Bima Yojana', 'scale: '1,10,000' },
+    { year: '2014', scheme: 'CMUHIS – CM Universal Health Insurance', 'scale: '90,000' },
+    { year: '2015', scheme: 'RSBY – Rashtriya Swasthya Bima Yojana', 'scale: '5,10,000' },
+    { year: '2016', scheme: 'AAA – Atal Amrit Abhiyan', 'scale: '4,10,000' },
+    { year: '2018', scheme: 'MSBY – Mukhya Mantri Swasthya Bima Yojana', 'scale: '2,40,000' },
+    { year: '2023–25', scheme: 'Ayushman Bharat – Claims Desk & Field Audit', 'scale: '6,00,000 claims' }
   ];
 
   return (
