@@ -25,7 +25,7 @@ export default function Government() {
     { year: '2011', scheme: 'RSBY – Rashtriya Swasthya Bima Yojana', states: ['Pan-India'], scale: '5,90,000' },
     { year: '2012', scheme: 'BKKY – Biju Krushak Kalyan Yojana', states: ['Odisha'], scale: '1,70,000' },
     { year: '2013', scheme: 'RSBY – Rashtriya Swasthya Bima Yojana', states: ['Pan-India'], scale: '1,10,000' },
-    { year: '2014', scheme: 'CMUHIS – CM Universal Health Insurance', states: ['Arunachal-Pradesh'],scale: '90,000' },
+    { year: '2014', scheme: 'CMUHIS – CM Universal Health Insurance', states: ['Arunachal-Pradesh'], scale: '90,000' },
     { year: '2015', scheme: 'RSBY – Rashtriya Swasthya Bima Yojana', states: ['Pan-India'], scale: '5,10,000' },
     { year: '2016', scheme: 'AAA – Atal Amrit Abhiyan', states: ['Assam'], scale: '4,10,000' },
     { year: '2018', scheme: 'MSBY – Mukhya Mantri Swasthya Bima Yojana', states: ['Chhattisgarh'], scale: '2,40,000' },
