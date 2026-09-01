@@ -93,7 +93,7 @@ export default function Footer() {
             </div>
             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', color: 'var(--text-secondary)' }}>
               <MapPin size={18} style={{ marginTop: '0.25rem', flexShrink: 0 }} />
-              <span style={{ lineHeight: '1.5' }}>Sr No-118/2, Chavhan Baug, Dhayari,<br />Pune, Haveli, Maharashtra – 411041</span>
+              <span style={{ lineHeight: '1.5' }}>Kohinoor B-Zone, First floor, 106, Baner,<br />Pune, Maharashtra – 411045</span>
             </div>
 
             {/* Quick Connect Row */}
